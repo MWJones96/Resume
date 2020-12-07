@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.11)  5 DEC 2020 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.11)  7 DEC 2020 00:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,12 +506,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 123
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1960) in paragraph at lines 125--126
-[]\OT1/cmr/m/n/10.95 Designed and im-ple-mented new fea-tures into Elec-tronic 
-Data Cap-ture (EDC) sys-tem, fea-tur-ing a 
- []
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
 Make it at least 4.08003pt.
@@ -545,7 +541,7 @@ xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/202
 ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msam10.pfb>
-Output written on _Matthew_Jones_CV.pdf (1 page, 84326 bytes).
+Output written on _Matthew_Jones_CV.pdf (1 page, 83741 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
