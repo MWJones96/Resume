@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.11)  19 JUN 2021 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.6.11)  13 JUL 2021 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,19 +482,25 @@ Package ragged2e Info: ABD: executing \RaggedRight on input line 100.
 
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 100.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
-9.
+LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
+ut line 108.
+
+(c:/texlive/2020/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 12
+1.
 
 (c:/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 109
+LaTeX Font Info:    Trying to load font information for U+msa on input line 121
 .
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 109
+LaTeX Font Info:    Trying to load font information for U+msb on input line 121
 .
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -521,23 +527,24 @@ Package rerunfilecheck Info: File `Matthew_Jones_CV.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 10065 strings out of 480478
- 144295 string characters out of 5903500
+ 10077 strings out of 480478
+ 144623 string characters out of 5903500
  435533 words of memory out of 5000000
- 25893 multiletter control sequences out of 15000+600000
- 538829 words of font info for 50 fonts, out of 8000000 for 9000
+ 25900 multiletter control sequences out of 15000+600000
+ 539443 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,45p,260b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msam10.pfb>
-Output written on Matthew_Jones_CV.pdf (1 page, 80320 bytes).
+ 34i,11n,45p,260b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}<c
+:/texlive/2020/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb><c:/te
+xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msam10.pfb>
+Output written on Matthew_Jones_CV.pdf (1 page, 92312 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
