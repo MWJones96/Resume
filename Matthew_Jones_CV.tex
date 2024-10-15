@@ -83,6 +83,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemi}{}
@@ -93,6 +94,27 @@
 
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\resumeSubheadingVeryBig}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+      \labelitemii{  \footnotesize#5} \\
+	 \labelitemii{  \footnotesize#6}
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingVeryVeryBig}[7]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & {\small #4} \\
+      \labelitemii{  \footnotesize#5} \\
+	 \labelitemii{  \footnotesize#6} \\
+	\labelitemii{  \footnotesize#7} \\
+    \end{tabular*}\vspace{-5pt}
+}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,40 +136,47 @@
 
 %-----------EXPERIENCE-----------------
 
-\section{Experience}
+\section{Professional Experience}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {Amazon Web Services}{Arlington, VA}
-      {\textbf{Software Development Engineer I, Inspector}}{October 2021 -- Present}
+      {US Bank (Bento Technologies)}{Remote, USA}
+      {\textbf{Software Engineer (Contract)}}{January 2024 -- Present}
 		\resumeItemListStart
-			\item {Created new features for the Inspector service, using CI/CD to ensure high quality and frequent delivery for our 30,000 active customers in 19 regions worldwide}
-			\item {Developed new function for configuring Docker images in ECR repositories in the Python Ops tool for our team's 25+ developers, saving an estimated 1 hour per developer, per week}
-			\item {Undertook oncall shifts once per month, monitoring alarms and performing complex Ops tasks to resolve \linebreak important tickets timely, 24 hours a day}
+			\item {Integrated Azure SSO functionality across all systems, reducing Admin user login times by 70\% and enabling persistent user sessions across services.}
+			\item {Identified and optimized the five slowest database query templates using SignalFX, reducing average runtime by over 90\%.}
+			\item {Collaborated with frontend teams to streamline release cycles, providing comprehensive backend \linebreak documentation to minimize friction and ensure smooth, bug-free releases.}
+		\resumeItemListEnd
+    \resumeSubheading
+      {Amazon Web Services}{Arlington, VA}
+      {\textbf{Software Development Engineer}}{October 2021 -- March 2023}
+		\resumeItemListStart
+			\item {Developed backend services in Java, Rust, and Golang for AWS Inspector, a security service with over 50,000 monthly active users across 21 global regions, generating more than \$2M in monthly revenue.}
+			\item {Automated repetitive operational tasks with Python scripts, saving developers approximately 1 hour per week by automating Docker image population for ECR repositories.}
+			\item {Provided 24/7 on-call support twice a month, resolving critical issues across all regions and managing up to 20 customer support tickets per shift.}
+			\item{Leveraged CI/CD pipelines and Infrastructure-as-Code to create and maintain scalable microservices, \linebreak enabling efficient expansion to billions of global users.}
 		\resumeItemListEnd
     \resumeSubheading
       {USC Alzheimer's Therapeutic Research Institute}{San Diego, CA}
-      {\textbf{Programmer Analyst II, Informatics}}{September 2020 -- August 2021}
+      {\textbf{Programmer Analyst}}{September 2020 -- August 2021}
 		\resumeItemListStart
-			\item {Integrated brand new core features into medical data capture system, used by over 1,000 clinical staff, \linebreak designing new solutions for both Django backend and React frontend}
-			\item {Developed REST APIs to set and reset user email preferences for over 3,000 users, and to batch send emails to those with preferences set, triggered by asynchronous events}
-			\item {Redesigned GUI for patient referral system, used by over 100,000 clinical staff; created GraphQL APIs to fetch data for thousands of patients from multiple databases}
+			\item {Developed and integrated new core features into a medical data capture system used by over 1,000 clinical staff, enhancing both backend (Django) and frontend (React) performance.}
+			\item {Designed REST APIs for managing email preferences for over 3,000 users, automating batch email sending triggered by asynchronous events.}
+			\item {Redesigned the GUI for a patient referral system used by over 100,000 clinical staff, and developed GraphQL APIs to retrieve patient data from multiple databases.}
 		\resumeItemListEnd
 
     \resumeSubheading
-      {Amazon}{Seattle, WA}
-      {\textbf{Software Development Engineer Intern, Alexa Excellence}}{May 2019 -- August 2019}
-      \resumeItemListStart
-        \item {Developed dashboard for AlexaHeat, an Ops dashboard used by more than 300 employees, cutting down \linebreak information seek time by 70\%}
-      \resumeItemListEnd
+      {Amazon Alexa}{Seattle, WA}
+      {\textbf{Software Development Engineer Intern}}{May 2019 -- August 2019}
+		\resumeItemListStart
+			\item{Developed the AlexaHeat dashboard, reducing information retrieval time by 70\%.}
+		\resumeItemListEnd
 
     \resumeSubheading
       {University of Wales}{Swansea, UK}
       {\textbf{Software Developer Intern}}{June 2018 -- August 2018}
-      \resumeItemListStart
-        \item
-          {Integrated two computationally-intensive C++ applications for simulating laser hair removal, for R\&D usage by product manufacturer reaching 400,000 customers annually}
-      \resumeItemListEnd
-
+		\resumeItemListStart
+        		\item{Integrated two C++ applications for laser hair removal simulations for R\&D use.}
+		\resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------------
@@ -155,33 +184,15 @@
 \section{Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Languages}
-      {Python, Java, Rust, C, C++, JavaScript, Go, PHP}
-    \resumeSubItem{Full Stack}
-      {Django, Node.js, Angular, React, PostgreSQL, DynamoDB, GraphQL, AWS}
-    \resumeSubItem{Dev Tools}
-      {Unix/Linux, Git, Docker}
+      {Python, Java, Rust, C, C++, JavaScript, TypeScript, Golang, PHP}
+    \resumeSubItem{Frameworks/Full Stack}
+      {Django, Node.js, Angular, React, PostgreSQL, DynamoDB, GraphQL, AWS, Azure}
+    \resumeSubItem{DevOps \& Tools}
+      {Docker, SignalFX, Terraform, Git, Unix/Linux, CI/CD Pipelines, Infrastructure-as-Code}
   \resumeSubHeadingListEnd
 
 \renewcommand{\labelitemi}{}
 
-%-----------PROJECTS-----------------
-
-\section{Projects}
-  \resumeSubHeadingListStart
-
-    \resumeSubheadingSmall
-      {Research Portal}{December 2019}
-      \resumeItemListStart
-        \item {Coordinated with team of six others to build new website for USC CSSE, rebuilding old WordPress tech stack into Node.js, connecting more than 10,000 USC students, staff and alumni worldwide}
-      \resumeItemListEnd
-
-    \resumeSubheadingSmall
-      {EZ-ML: SB Hacks V}{January 2019}
-      \resumeItemListStart
-        \item {Developed and deployed SaaS web app made with a team of three others, allowing users to create ML \linebreak models without writing code, using Python, Flask, Bootstrap, GCP Cloud Functions and Twilio API}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 
@@ -190,10 +201,9 @@
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
       {Master of Science in Computer Science}{May 2020}	
-    \resumeSubheadingBig
+    \resumeSubheading
       {University of Exeter}{Exeter, UK}
       {Master of Engineering in Electronic Engineering and Computer Science}{July 2018}
-      {Bachelor of Engineering in Electronic Engineering and Computer Science}{July 2017}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
