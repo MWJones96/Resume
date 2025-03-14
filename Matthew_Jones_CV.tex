@@ -123,7 +123,7 @@
 
 %----------HEADING-----------------
 
-\textbf{\LARGE Matthew Jones}\\
+\textbf{\LARGE Matthew Jones} \hfill \textbf{Eligible to work in UK and US}\\
 \vspace{\baselineskip} % <======
 
 {\Centering % <=========================================================
@@ -134,50 +134,7 @@
 \raisebox{-0.20\height}{\Large \faGlobe} \space \href{https://mwjones96.github.io/}{mwjones96.github.io} % <======
 } % <===================================================================
 
-%-----------EXPERIENCE-----------------
-
-\section{Professional Experience}
-\resumeSubHeadingListStart
-    \resumeSubheading
-      {US Bank (Bento Technologies)}{Remote, USA}
-      {\textbf{Software Engineer (Contract)}}{January 2024 -- Present}
-		\resumeItemListStart
-			\item {Integrated Azure SSO functionality across all systems, reducing Admin user login times by 70\% and enabling persistent user sessions across services.}
-			\item {Identified and optimized the five slowest database query templates using SignalFX, reducing average runtime by over 90\%.}
-			\item {Collaborated with frontend teams to streamline release cycles, providing comprehensive backend \linebreak documentation to minimize friction and ensure smooth, bug-free releases.}
-		\resumeItemListEnd
-    \resumeSubheading
-      {Amazon Web Services}{Arlington, VA}
-      {\textbf{Software Development Engineer}}{October 2021 -- March 2023}
-		\resumeItemListStart
-			\item {Developed backend services in Java, Rust, and Golang for AWS Inspector, a security service with over 50,000 monthly active users across 21 global regions, generating more than \$2M in monthly revenue.}
-			\item {Automated repetitive operational tasks with Python scripts, saving developers approximately 1 hour per week by automating Docker image population for ECR repositories.}
-			\item {Provided 24/7 on-call support twice a month, resolving critical issues across all regions and managing up to 20 customer support tickets per shift.}
-			\item{Leveraged CI/CD pipelines and Infrastructure-as-Code to create and maintain scalable microservices, \linebreak enabling efficient expansion to billions of global users.}
-		\resumeItemListEnd
-    \resumeSubheading
-      {USC Alzheimer's Therapeutic Research Institute}{San Diego, CA}
-      {\textbf{Programmer Analyst}}{September 2020 -- August 2021}
-		\resumeItemListStart
-			\item {Developed and integrated new core features into a medical data capture system used by over 1,000 clinical staff, enhancing both backend (Django) and frontend (React) performance.}
-			\item {Designed REST APIs for managing email preferences for over 3,000 users, automating batch email sending triggered by asynchronous events.}
-			\item {Redesigned the GUI for a patient referral system used by over 100,000 clinical staff, and developed GraphQL APIs to retrieve patient data from multiple databases.}
-		\resumeItemListEnd
-
-    \resumeSubheading
-      {Amazon Alexa}{Seattle, WA}
-      {\textbf{Software Development Engineer Intern}}{May 2019 -- August 2019}
-		\resumeItemListStart
-			\item{Developed the AlexaHeat dashboard, reducing information retrieval time by 70\%.}
-		\resumeItemListEnd
-
-    \resumeSubheading
-      {University of Wales}{Swansea, UK}
-      {\textbf{Software Developer Intern}}{June 2018 -- August 2018}
-		\resumeItemListStart
-        		\item{Integrated two C++ applications for laser hair removal simulations for R\&D use.}
-		\resumeItemListEnd
-\resumeSubHeadingListEnd
+\renewcommand{\labelitemi}{}
 
 %-----------SKILLS-----------------
 
@@ -188,11 +145,58 @@
     \resumeSubItem{Frameworks/Full Stack}
       {Django, Node.js, Angular, React, PostgreSQL, DynamoDB, GraphQL, AWS, Azure}
     \resumeSubItem{DevOps \& Tools}
-      {Docker, SignalFX, Terraform, Git, Unix/Linux, CI/CD Pipelines, Infrastructure-as-Code}
+      {Docker, SignalFX, Terraform, AWS CDK, Git, Unix/Linux, CI/CD Pipelines}
   \resumeSubHeadingListEnd
 
-\renewcommand{\labelitemi}{}
+%-----------EXPERIENCE-----------------
 
+\section{Professional Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Software Engineer}{Remote, USA}
+  {\textbf{US Bank/Bento Technologies}}{January 2024 -- Present}
+    \resumeItemListStart
+      \item {Led Azure SSO integration across Java services using OAuth2, streamlining admin login and enabling \linebreak persistent sessions, greatly enhancing admin user experience, directly benefitting the end customer.}
+      \item {Optimized database query performance by targeting the slowest templates, reducing average query times by 90\%, contributing to improved transaction speeds and system responsiveness, particularly in high-traffic.}
+      \item {Enhanced cross-team collaboration between backend, frontend, and DevOps, creating comprehensive \linebreak documentation and processes that reduced detected bugs by 75\%, and halved release times.}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {Software Development Engineer}{Arlington, VA}
+  {\textbf{Amazon Web Services}}{2021 -- 2023}
+    \resumeItemListStart
+      \item {Created and enhanced backend microservices in Java, Rust, and Golang for AWS Inspector, improving \linebreak satisfaction for 50,000+ active users in 21 regions, while maintaining and growing \$2M+ in monthly revenue.}
+      \item {Automated key operational tasks using Python scripts, reducing individual developer workload by up to 1 hour per week, or 80 hours monthly for the entire team, improving development velocity for our customers.}
+      \item {Led on-call twice a month, while addressing, on average, 20+ customer support tickets per shift, maintaining Inspector V1 and V2 uptime, contributing to high service reliability and customer satisfaction.}
+      \item {Built scalable CI/CD pipelines and deployed services using Infrastructure-as-Code, enhancing deployment consistency and efficiency, streamlining deployment cycles, making it easy to scale services to billions of users.}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {Programmer Analyst}{San Diego, CA}
+  {\textbf{USC Alzheimer’s Therapeutic Research Institute}}{2020 -- 2021}
+    \resumeItemListStart
+      \item {Developed and maintained critical data capture systems in Django and React, enhancing accuracy for \linebreak medical data input by 1,000+ clinical staff, contributing to improved staff productivity and efficiency.}
+      \item {Created RESTful APIs to automate email preferences for over 3,000 users, enabling automated distribution for patient updates and reducing manual processing time, streamlining workflows and reducing latency.}
+      \item {Revamped patient referral system GUI, utilized by 100,000+ clinical staff members, by creating responsive designs, while using GraphQL to access large datasets, increasing system usability and reliability.}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {SDE Intern}{Seattle, WA}
+  {\textbf{Amazon Alexa}}{Summer 2019}
+    \resumeItemListStart
+      \item {Designed and implemented AlexaHeat, an internal dashboard to analyze Alexa usage data trends in real-time, providing data insights that help align team goals with customer needs.}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {Software Developer Intern}{Swansea, UK}
+  {\textbf{University of Wales}}{Summer 2018}
+    \resumeItemListStart
+      \item {Integrated two C++ applications used for laser hair removal simulations, consolidating R\&D tools into a \linebreak single interface, enabling researchers to perform simulations more efficiently.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 
@@ -200,10 +204,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
-      {Master of Science in Computer Science}{May 2020}	
+      {Master of Science in Computer Science}{2020}	
     \resumeSubheading
       {University of Exeter}{Exeter, UK}
-      {Master of Engineering in Electronic Engineering and Computer Science}{July 2018}
+      {Master of Engineering in Electronic Engineering and Computer Science}{2018}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
