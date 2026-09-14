@@ -1,6 +1,8 @@
 # Both editions come out of Matthew_Jones_CV.tex; the UK one is selected by
 # defining \cvuk before the file is read. -jobname keeps the two builds'
 # aux files from overwriting each other.
+#
+# They differ in three things only: phone number, status line, and spelling.
 
 src := "Matthew_Jones_CV.tex"
 

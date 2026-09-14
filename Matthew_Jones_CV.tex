@@ -7,27 +7,9 @@
 % the command line for the UK one. The justfile wraps both -- `just us`,
 % `just uk`, `just` for both -- or by hand:
 %   pdflatex "\def\cvuk{}\input{Matthew_Jones_CV}"
-%
-% \def rather than \newcommand because this has to run before \documentclass,
-% which is the whole point: the paper size is a class option, so it can't be
-% switched afterwards.
 %------------------------
 
-\ifdefined\cvuk
-  \def\cvpaper{a4paper}
-  \def\cvphone{07914342019}
-  % The UK edition has carried no work-authorisation line since the last
-  % `uk` commit; fill this in to restore one.
-  \def\cvworkauth{}
-  \def\cvhomebase{Remote, UK}
-\else
-  \def\cvpaper{letterpaper}
-  \def\cvphone{(213) 631-8562}
-  \def\cvworkauth{British Citizen/US H1B}
-  \def\cvhomebase{Remote, USA}
-\fi
-
-\documentclass[\cvpaper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{fontawesome}
 \usepackage{latexsym}
@@ -63,6 +45,24 @@
 \addtolength{\textwidth}{1.2in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
+
+%-------------------------
+% EDITION -- everything that differs between the two CVs. Both are letter
+% paper; only the phone number, the status line and the spelling change.
+%
+% \spell takes the US form first and the UK form second. Reach for it in the
+% body text whenever a word differs (-ize/-ise, -or/-our, -er/-re) rather
+% than picking one and letting the other edition read wrong.
+
+\ifdefined\cvuk
+  \newcommand{\cvphone}{07914342019}
+  \newcommand{\cvstatus}{British Citizen}
+  \newcommand{\spell}[2]{#2}
+\else
+  \newcommand{\cvphone}{(213) 631-8562}
+  \newcommand{\cvstatus}{H1B visa}
+  \newcommand{\spell}[2]{#1}
+\fi
 
 \urlstyle{same}
 
@@ -127,7 +127,7 @@
 
 %----------HEADING-----------------
 
-\textbf{\LARGE Matthew Jones} \hfill \textbf{\cvworkauth}\\
+\textbf{\LARGE Matthew Jones} \hfill \textbf{\cvstatus}\\
 \vspace{0.6\baselineskip}
 
 {\Centering
@@ -159,12 +159,12 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {Software Engineer}{\cvhomebase}
+  {Software Engineer}{Remote, USA}
   {\textbf{US Bank}}{Jan 2024 -- Present}
     \resumeItemListStart
-      \item {Contributed to the successful launch of U.S. Bank Spend Management, available on all US Bank business credit cards, enabling centralized monitoring and management of business spending.}
+      \item {Contributed to the successful launch of U.S. Bank Spend Management, available on all US Bank business credit cards, enabling \spell{centralized}{centralised} monitoring and management of business spending.}
       \item {Implemented Single Sign-On authentication with Azure Active Directory for the Spend Management Admin Portal, enhancing security and streamlining login process for more than 3,000 customer support agents.}
-      \item {Led modernization process to convert monolithic backend into Java Spring Boot microservices, improving scalability, maintainability, and deployment speed, increasing individual developer velocity by 50\%.}
+      \item {Led \spell{modernization}{modernisation} process to convert monolithic backend into Java Spring Boot microservices, improving scalability, maintainability, and deployment speed, increasing individual developer velocity by 50\%.}
     \resumeItemListEnd
 
 \resumeSubheading
