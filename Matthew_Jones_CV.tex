@@ -2,9 +2,12 @@
 % Resume in Latex
 % Author : Matthew Jones
 % License : MIT
+%
+% NOTE: This is the US edition (master). The UK edition lives on the `uk`
+% branch and should differ ONLY in the LOCALE block below.
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{fontawesome}
 \usepackage{latexsym}
@@ -21,11 +24,25 @@
 \usepackage[document]{ragged2e}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{enumitem,amssymb,graphicx}
+\usepackage{microtype}
+
+%-------------------------
+% LOCALE -- the only block that differs between the US (master) and UK (uk)
+% editions. Keep every other line identical across branches so the two stay
+% trivially mergeable.
+
+% (the \documentclass paper size above is part of this block:
+%  letterpaper on master, a4paper on uk)
+\newcommand{\cvphone}{(213) 631-8562}
+\newcommand{\cvworkauth}{British Citizen/US H1B}
+\newcommand{\cvhomebase}{Remote, USA} % location shown on the current role
+
+%-------------------------
 
 \DeclareFontFamily{U}{fontawesomeOne}{}
 \DeclareFontShape{U}{fontawesomeOne}{m}{n}
   {<-> FontAwesome--fontawesomeone}{}
-\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeOne}\selectfont} 
+\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeOne}\selectfont}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -34,87 +51,67 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\parskip}{0pt}
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       {\small#3} & {\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubheadingSmall}[2]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubheadingBig}[6]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       {\small#3} & {\small #4} \\
       {\small#5} & {\small #6} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
 
 \renewcommand{\labelitemi}{}
 \renewcommand{\labelitemii}{\scalebox{0.5}{\raisebox{0.65ex}{$\blacksquare$}}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=0pt,topsep=2pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-\newcommand{\resumeSubheadingVeryBig}[6]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      {\small#3} & {\small #4} \\
-      \labelitemii{  \footnotesize#5} \\
-	 \labelitemii{  \footnotesize#6}
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubheadingVeryVeryBig}[7]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      {\small#3} & {\small #4} \\
-      \labelitemii{  \footnotesize#5} \\
-	 \labelitemii{  \footnotesize#6} \\
-	\labelitemii{  \footnotesize#7} \\
-    \end{tabular*}\vspace{-5pt}
-}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,16 +120,16 @@
 
 %----------HEADING-----------------
 
-\textbf{\LARGE Matthew Jones} \hfill \textbf{British Citizen/US H1B}\\
-\vspace{\baselineskip} % <======
+\textbf{\LARGE Matthew Jones} \hfill \textbf{\cvworkauth}\\
+\vspace{0.6\baselineskip}
 
-{\Centering % <=========================================================
-\raisebox{-0.20\height}{\Large \faInbox} \space \href{mailto:mwjones0896@gmail.com}{mwjones0896@gmail.com} \hfill % <======
-\raisebox{-0.20\height}{\Large \faPhone} \space (213) 631-8562 \hfill % <======
-\raisebox{-0.20\height}{\Large \faGithub} \space \href{https://github.com/MWJones96}{MWJones96} \hfill % <======
-\raisebox{-0.20\height}{\Large \faLinkedinSquare} \space \href{https://www.linkedin.com/in/mwjones96/}{mwjones96} \hfill % <======
-\raisebox{-0.20\height}{\Large \faGlobe} \space \href{https://mwjones96.github.io/}{mwjones96.github.io} % <======
-} % <===================================================================
+{\Centering
+\raisebox{-0.20\height}{\large \faInbox} \space \href{mailto:mwjones0896@gmail.com}{mwjones0896@gmail.com} \hfill
+\raisebox{-0.20\height}{\large \faPhone} \space \cvphone \hfill
+\raisebox{-0.20\height}{\large \faGithub} \space \href{https://github.com/MWJones96}{MWJones96} \hfill
+\raisebox{-0.20\height}{\large \faLinkedinSquare} \space \href{https://www.linkedin.com/in/mwjones96/}{mwjones96} \hfill
+\raisebox{-0.20\height}{\large \faGlobe} \space \href{https://mwjones96.github.io/}{mwjones96.github.io}
+}
 
 \renewcommand{\labelitemi}{}
 
@@ -155,12 +152,12 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {Software Engineer}{Remote, USA}
+  {Software Engineer}{\cvhomebase}
   {\textbf{US Bank}}{Jan 2024 -- Present}
     \resumeItemListStart
       \item {Contributed to the successful launch of U.S. Bank Spend Management, available on all US Bank business credit cards, enabling centralized monitoring and management of business spending.}
-	\item {Implemented Single Sign-On authentication with Azure Active Directory for the Spend Management Admin Portal, enhancing security and streamlining login process for more than 3,000 customer support agents.}
-	\item {Led modernization process to convert monolithic backend into Java Spring Boot microservices, improving scalability, maintainability, and deployment speed, increasing individual developer velocity by 50\%.}
+      \item {Implemented Single Sign-On authentication with Azure Active Directory for the Spend Management Admin Portal, enhancing security and streamlining login process for more than 3,000 customer support agents.}
+      \item {Led modernization process to convert monolithic backend into Java Spring Boot microservices, improving scalability, maintainability, and deployment speed, increasing individual developer velocity by 50\%.}
     \resumeItemListEnd
 
 \resumeSubheading
@@ -171,11 +168,9 @@
   {Software Development Engineer}{Arlington, VA}
   {\textbf{Amazon Web Services}}{Oct 2021 -- Mar 2023}
     \resumeItemListStart
-      \item {Developed backend services in Java/Rust/Golang, for AWS Inspector, a vulnerability management tool with more than
-125,000 monthly active users in 21 regions, which generates over \$5 million in revenue per month.}
+      \item {Developed backend services in Java/Rust/Golang, for AWS Inspector, a vulnerability management tool with more than 125,000 monthly active users in 21 regions, which generates over \$5 million in revenue per month.}
       \item {Created ops scripts in Python to perform common, yet arduous tasks programmatically, used daily by the software development team, cumulatively saving more than 5 hours, per engineer, per week.}
-      \item {Fulfilled oncall duties twice a month, being available for 24-hour maintenance of Inspector in all regions
-worldwide, also providing technical support to users, averaging around 20 customer tickets per shift.}
+      \item {Fulfilled oncall duties twice a month, being available for 24-hour maintenance of Inspector in all regions worldwide, also providing technical support to users, averaging around 20 customer tickets per shift.}
       \item {Built CI/CD pipelines and deployed services using Infrastructure-as-Code in TypeScript with AWS CDK, improving efficiency, streamlining release cycles, and enabling horizontal scaling to any number of users.}
     \resumeItemListEnd
 
@@ -184,10 +179,8 @@ worldwide, also providing technical support to users, averaging around 20 custom
   {\textbf{USC Alzheimer’s Therapeutic Research Institute}}{Sept 2020 -- Aug 2021}
     \resumeItemListStart
       \item {Integrated new core features into data capture system for clinical trials, used by more than 1,000 trained medical professionals, using Django, React and AWS.}
-      \item {Developed REST APIs to set and reset user email preferences for over 3,000 users, and to batch send emails
-to those with preferences set, triggered by asynchronous events.}
-      \item {Redesigned GUI for patient referral system, used by over 100,000 clinical staff; created GraphQL APIs to
-fetch data for thousands of patients from multiple databases.}
+      \item {Developed REST APIs to set and reset user email preferences for over 3,000 users, and to batch send emails to those with preferences set, triggered by asynchronous events.}
+      \item {Redesigned GUI for patient referral system, used by over 100,000 clinical staff; created GraphQL APIs to fetch data for thousands of patients from multiple databases.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -212,11 +205,13 @@ fetch data for thousands of patients from multiple databases.}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
-      {Master of Science in Computer Science}{2020}	
+      {Master of Science in Computer Science}{2020}
     \resumeSubheading
       {University of Exeter}{Exeter, UK}
       {Master of Engineering in Electronic Engineering and Computer Science}{2018}
   \resumeSubHeadingListEnd
+
+%-------------------------------------------
 
 %-------------------------------------------
 
