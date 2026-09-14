@@ -3,11 +3,31 @@
 % Author : Matthew Jones
 % License : MIT
 %
-% NOTE: This is the US edition (master). The UK edition lives on the `uk`
-% branch and should differ ONLY in the LOCALE block below.
+% One source, two editions. Builds as the US CV by default; define \cvuk on
+% the command line for the UK one. The justfile wraps both -- `just us`,
+% `just uk`, `just` for both -- or by hand:
+%   pdflatex "\def\cvuk{}\input{Matthew_Jones_CV}"
+%
+% \def rather than \newcommand because this has to run before \documentclass,
+% which is the whole point: the paper size is a class option, so it can't be
+% switched afterwards.
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\ifdefined\cvuk
+  \def\cvpaper{a4paper}
+  \def\cvphone{07914342019}
+  % The UK edition has carried no work-authorisation line since the last
+  % `uk` commit; fill this in to restore one.
+  \def\cvworkauth{}
+  \def\cvhomebase{Remote, UK}
+\else
+  \def\cvpaper{letterpaper}
+  \def\cvphone{(213) 631-8562}
+  \def\cvworkauth{British Citizen/US H1B}
+  \def\cvhomebase{Remote, USA}
+\fi
+
+\documentclass[\cvpaper,10pt]{article}
 
 \usepackage{fontawesome}
 \usepackage{latexsym}
@@ -25,19 +45,6 @@
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{enumitem,amssymb,graphicx}
 \usepackage{microtype}
-
-%-------------------------
-% LOCALE -- the only block that differs between the US (master) and UK (uk)
-% editions. Keep every other line identical across branches so the two stay
-% trivially mergeable.
-
-% (the \documentclass paper size above is part of this block:
-%  letterpaper on master, a4paper on uk)
-\newcommand{\cvphone}{(213) 631-8562}
-\newcommand{\cvworkauth}{British Citizen/US H1B}
-\newcommand{\cvhomebase}{Remote, USA} % location shown on the current role
-
-%-------------------------
 
 \DeclareFontFamily{U}{fontawesomeOne}{}
 \DeclareFontShape{U}{fontawesomeOne}{m}{n}

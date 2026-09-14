@@ -1,5 +1,10 @@
-Matthew_Jones_CV.aux
-Matthew_Jones_CV.log
-Matthew_Jones_CV.out
-Matthew_Jones_CV.pdf
-Matthew_Jones_CV.synctex.gz
+# latexmk writes one set per edition (Matthew_Jones_CV_US.*, _UK.*, see the
+# justfile); the bare Matthew_Jones_CV.* forms come from running pdflatex on
+# the source directly.
+Matthew_Jones_CV*.aux
+Matthew_Jones_CV*.fdb_latexmk
+Matthew_Jones_CV*.fls
+Matthew_Jones_CV*.log
+Matthew_Jones_CV*.out
+Matthew_Jones_CV*.pdf
+Matthew_Jones_CV*.synctex.gz
