@@ -9,7 +9,7 @@
 %   pdflatex "\def\cvuk{}\input{Matthew_Jones_CV}"
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,9pt]{extarticle}
 
 \usepackage{fontawesome}
 \usepackage{latexsym}
@@ -72,8 +72,13 @@
 \setlength{\parskip}{0pt}
 
 % Sections formatting
+% Headings are pinned to absolute sizes rather than \large/\LARGE, so the
+% body can be resized without dragging the hierarchy down with it.
+\newcommand{\cvnamesize}{\fontsize{17}{20}\selectfont}
+\newcommand{\cvsectionsize}{\fontsize{12}{14}\selectfont}
+
 \titleformat{\section}{%
-  \scshape\raggedright\large
+  \scshape\raggedright\cvsectionsize
 }{}{0em}{}[\color{black}\titlerule]
 \titlespacing*{\section}{0pt}{11pt}{5pt}
 
@@ -148,7 +153,7 @@
 \begin{document}
 %-------------------------- HEADING -------------------------------------------
 
-\textbf{\LARGE Matthew Jones} \hfill \textbf{\cvstatus}\\
+\textbf{\cvnamesize Matthew Jones} \hfill \textbf{\cvstatus}\\
 \vspace{0.6\baselineskip}
 
 {\Centering
