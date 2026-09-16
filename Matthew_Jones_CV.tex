@@ -60,7 +60,7 @@
   \newcommand{\spell}[2]{#2}
 \else
   \newcommand{\cvphone}{(213) 631-8562}
-  \newcommand{\cvstatus}{H1B visa}
+  \newcommand{\cvstatus}{H1B Visa}
   \newcommand{\spell}[2]{#1}
 \fi
 
@@ -72,41 +72,49 @@
 \setlength{\parskip}{0pt}
 
 % Sections formatting
-\titleformat{\section}{
+\titleformat{\section}{%
   \scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule]
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\section}{0pt}{11pt}{5pt}
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2}
-  }
+%
+% Vertical rhythm is set here, in the list parameters, and nowhere else --
+% no \vspace at the call sites. Four gaps matter, and each has exactly one
+% source, so any of them can be retuned without knock-on effects:
+%
+%   section rule -> content   \titlespacing's third argument
+%   entry -> entry            outer itemsep + the inner list's closing topsep
+%   heading -> its bullets    inner topsep
+%   bullet -> bullet          inner itemsep
+
+\newcommand{\resumeItem}[2]{%
+  \item\small{\textbf{#1}{: #2}}%
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\newcommand{\resumeSubheading}[4]{%
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {\small#3} & {\small #4} \\
-    \end{tabular*}\vspace{-4pt}
+      {\small #3} & {\small #4}
+    \end{tabular*}%
 }
 
-\newcommand{\resumeSubheadingSmall}[2]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-    \end{tabular*}\vspace{-4pt}
+\newcommand{\resumeSubheadingSmall}[2]{%
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+    \end{tabular*}%
 }
 
-\newcommand{\resumeSubheadingBig}[6]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\newcommand{\resumeSubheadingBig}[6]{%
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {\small#3} & {\small #4} \\
-      {\small#5} & {\small #6} \\
-    \end{tabular*}\vspace{-4pt}
+      {\small #3} & {\small #4} \\
+      {\small #5} & {\small #6}
+    \end{tabular*}%
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
@@ -114,11 +122,25 @@
 \renewcommand{\labelitemi}{}
 \renewcommand{\labelitemii}{\scalebox{0.5}{\raisebox{0.65ex}{$\blacksquare$}}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=0pt,topsep=2pt]}
+% One item per role, degree or project. Flush left, so the entry headings
+% line up with the section rules above them.
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0pt,labelsep=0pt,itemsep=5pt,parsep=0pt,%
+                  topsep=3pt,partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=0pt,parsep=0pt,topsep=1pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+% Skills are one-liners rather than entries, and want to sit closer together.
+\newcommand{\resumeSkillsListStart}{%
+  \begin{itemize}[leftmargin=0pt,labelsep=0pt,itemsep=2pt,parsep=0pt,%
+                  topsep=3pt,partopsep=0pt]}
+\newcommand{\resumeSkillsListEnd}{\end{itemize}}
+
+% The bullets under a single entry. Indented enough to read as subordinate
+% to the heading, with wrapped lines aligning under the text, not the mark.
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=11pt,labelsep=5pt,itemsep=2.5pt,parsep=0pt,%
+                  topsep=3pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -143,14 +165,14 @@
 %-----------SKILLS-----------------
 
 \section{Skills}
-  \resumeSubHeadingListStart
+  \resumeSkillsListStart
     \resumeSubItem{Languages}
       {Python, Java, Rust, C, C++, JavaScript, TypeScript, Golang, PHP}
     \resumeSubItem{Frameworks/Full Stack}
       {Django, Node.js, Angular, React, PostgreSQL, DynamoDB, GraphQL, AWS, Azure}
     \resumeSubItem{DevOps \& Tools}
       {Docker/Kubernetes, SignalFX, Terraform, Git, Linux, CI/CD}
-  \resumeSubHeadingListEnd
+  \resumeSkillsListEnd
 
 %-----------EXPERIENCE-----------------
 
@@ -159,17 +181,27 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {Software Engineer}{Remote, USA}
-  {\textbf{US Bank}}{Jan 2024 -- Present}
+  {Software Engineer}{London, UK}
+  {\textbf{Quaisr}}{Aug 2026 -- Present}
+    \resumeItemListStart
+      \item {Lorem Ipsum}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {Technical Consultant}{Global}
+  {\textbf{Freelance}}{May 2020 -- Present}
+    \resumeItemListStart
+      \item {Lorem Ipsum}
+    \resumeItemListEnd
+
+\resumeSubheading
+  {Software Engineer}{San Francisco, CA}
+  {\textbf{US Bank/Bento Technologies}}{Jan 2024 -- Nov 2024}
     \resumeItemListStart
       \item {Contributed to the successful launch of U.S. Bank Spend Management, available on all US Bank business credit cards, enabling \spell{centralized}{centralised} monitoring and management of business spending.}
       \item {Implemented Single Sign-On authentication with Azure Active Directory for the Spend Management Admin Portal, enhancing security and streamlining login process for more than 3,000 customer support agents.}
       \item {Led \spell{modernization}{modernisation} process to convert monolithic backend into Java Spring Boot microservices, improving scalability, maintainability, and deployment speed, increasing individual developer velocity by 50\%.}
     \resumeItemListEnd
-
-\resumeSubheading
-  {Freelance Software Engineer}{Remote, UK}
-  {\textbf{Self-employed}}{Mar 2023 -- Jan 2024}
 
 \resumeSubheading
   {Software Development Engineer}{Arlington, VA}
