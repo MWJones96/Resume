@@ -185,12 +185,14 @@
     {Software Engineer}{London, UK}
     {\textbf{Quaisr}}{Aug 2026 -- Present}
     \resumeItemListStart
-      \item {Restored a CI quality gate that had passed silently since
-        introduction, bringing 44 of 48 example blocks to clean pylint and mypy
-        and closing the route by which type errors reached main.}
-      \item {Root-caused a 50MB source limit misapplied to uploaded .git packs,
-        restoring source availability for any block with commit history, then
-        surfaced the true cause across 4 layers in 5 merged PRs.}
+      \item {Discovered the CI lint and type-check stages had been reporting
+        success without ever running, then fixed the gate and brought 44 of 48
+        modules in the company's plugin SDK up to passing, closing a route by
+        which type errors reached the main branch unchecked.}
+      \item {Traced a bug that silently discarded uploaded source code for any
+        project containing Git history, then rebuilt its error reporting end to
+        end, from database schema through to user interface, across 5 pull
+        requests.}
     \resumeItemListEnd
 
   \resumeSubheading
